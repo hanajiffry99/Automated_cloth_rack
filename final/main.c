@@ -2,7 +2,7 @@
  * final.c
  *
  * Created: 4/15/2021 3:20:24 PM
- * Author : VivoBook
+ * Author : VivoBook/Hana Jiffry
  */ 
 
 
@@ -22,23 +22,31 @@
 #include "light_right.h"
 #include "rain.h"
 #include "lcd_display.h"
+#include "line_following"
 
 
 int main(void)
 {
 	start();
-	//moving some distance
-	//stopping
+	move ();
+	_delay_ms(5000);
+	set_motors(0);
 	
-	int left_light=light_value_left(),right_light=light_value_right();
+	int front_light=light_value_left(),back_light=light_value_right();
 	
-	if(left_light>right_light)
+	if(front_light>back_light)
 	{
-		//move to left and move forward
+		set_motors(30);
+		move();
+		_delay_ms(2000);
+		set_motors(0);
 	}
-	else if(right_light>left_light)
+	else if(back_light>front_light)
 	{
-		//move to right and move forward
+		set_motors(-230);
+		move();
+		_delay_ms(2000);
+		set_motors(0);
 	}
 	else
 	{
@@ -47,9 +55,9 @@ int main(void)
 	
 	int temp_value=Temp(),hum_value=Humidity(),rain=rain_value();
 	
-	if(temp_value>=27||hum_value>=50||rain>=10)
+	if(temp_value>=27||hum_value>=100||rain>=10)
 	{
-		//move to shelter
+		move();
 	}
 	
 }

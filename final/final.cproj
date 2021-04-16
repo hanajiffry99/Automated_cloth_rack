@@ -147,6 +147,9 @@
     <Compile Include="light_right.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="line_following.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>

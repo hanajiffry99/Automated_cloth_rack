@@ -2,7 +2,7 @@
  * i2c.h
  *
  * Created: 4/16/2021 12:10:58 AM
- *  Author: VivoBook
+ *  Author: VivoBook/Hana Jiffry
  */ 
 
 

@@ -2,7 +2,7 @@
  * servomotors.h
  *
  * Created: 4/15/2021 8:42:03 PM
- *  Author: VivoBook
+ *  Author: VivoBook/Hana Jiffry
  */ 
 
 
@@ -60,6 +60,16 @@ void rotate_motors_A(int rotate_speed)
 	else if(rotate_speed==-90)
 	{
 		OCR1A=55;
+		_delay_ms(1000);
+	}
+	else if(rotate_speed==75)
+	{
+		OCR1B=120;
+		_delay_ms(1000);
+	}
+	else if(rotate_speed==-75)
+	{
+		OCR1B=68;
 		_delay_ms(1000);
 	}
 }

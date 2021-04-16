@@ -2,7 +2,7 @@
  * lcd_display.h
  *
  * Created: 4/16/2021 12:07:26 AM
- *  Author: VivoBook
+ *  Author: VivoBook/Hana Jiffry
  */ 
 
 

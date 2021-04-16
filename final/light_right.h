@@ -2,7 +2,7 @@
  * light_right.h
  *
  * Created: 4/15/2021 11:51:44 PM
- *  Author: VivoBook
+ *  Author: VivoBook/Hana Jiffry
  */ 
 
 
@@ -43,7 +43,7 @@ float light_value_right(void)
 	while(1)
 	{
 		adc_value = ADC_Read_right();	/* Copy the ADC value */
-		moisture = 100-(adc_value*100.00)/1023.00; /* Calculate moisture in % */
+		intensity = 100-(adc_value*100.00)/1023.00; /* Calculate moisture in % */
 		_delay_ms(500);
 	}
 	return intensity;
